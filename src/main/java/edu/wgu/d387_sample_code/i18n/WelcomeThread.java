@@ -35,6 +35,7 @@ public class WelcomeThread {
                 e.printStackTrace();
             }
         });
+
         return messages;
     }
 }

@@ -31,7 +31,7 @@
 
 
       <div class="row">
-        <div class=""col-12>
+        <div class="col-12">
           <div class="gallery">
             <img src="assets/images/intro_room.jpg" alt="Intro Gallery Room Sample Pictures">
             <img src="assets/images/intro_pool.jpg" alt="Intro Gallery Pool Sample Pictures">
@@ -80,7 +80,9 @@
                 </td>
                 <td>
                   <strong>Room #: {{room.roomNumber}}</strong><br/>
-                  <strong>Price: ${{room.price}}</strong>
+                  <strong>{{room.price | currency}}</strong><br/>
+                  <strong>{{room.price | currency:'CAD'}}</strong><br/>
+                  <strong>{{room.price | currency: 'EUR'}}</strong><br/>
                 </td>
                 <td>
                   <button type="submit" class="btn btn-primary" (click)="reserveRoom(room.id)">Reserve</button>
@@ -218,9 +220,9 @@
       <ul class="group">
         <li><a href="https://twitter.com/"><img class="icon" src="assets/images/twitter.png"
                                                 alt="icon for twitter"></a></li>
-        <li><a href="http://www.facebook.com/"><img class="icon" src="assets/images/facebook.png"
+        <li><a href="https://www.facebook.com/"><img class="icon" src="assets/images/facebook.png"
                                                     alt="icon for facebook"></a></li>
-        <li><a href="http://www.youtube.com/"><img class="icon" src="assets/images/youtube.png" alt="icon for youtube"></a>
+        <li><a href="https://www.youtube.com/"><img class="icon" src="assets/images/youtube.png" alt="icon for youtube"></a>
         </li>
       </ul>
     </div>

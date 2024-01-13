@@ -17,11 +17,8 @@ public class WelcomeController {
         this.welcomethread = welcomethread;
     }
 
-    // likely need a GET method, right? Since I am going to retrieve data from the resource bundle?
-    // or do I do post to create the welcome text page/sign?
     @GetMapping("/welcome")
     public ArrayList<String> getWelcomeMessage() {
-        //this.welcomethread.add("hello sparky");
         return welcomethread.getWelcomeMessage();
     }
 }

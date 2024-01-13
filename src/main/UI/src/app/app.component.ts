@@ -28,12 +28,18 @@ export class AppComponent implements OnInit{
   currentCheckInVal!:string;
   currentCheckOutVal!:string;
   welcomeMessage:string[] = [];
+  timeConversion:string[] = [];
 
 
   ngOnInit(){
     this.getWelcomeMessage().subscribe((data)=> {
       this.welcomeMessage = data;
     })
+
+    this.getTimeConversion().subscribe((data : string[]) :void => {
+      this.timeConversion = data;
+    })
+
     this.roomsearch= new FormGroup({
       checkin: new FormControl(' '),
       checkout: new FormControl(' ')
@@ -83,6 +89,10 @@ export class AppComponent implements OnInit{
 
   getWelcomeMessage():Observable<string[]> {
     return this.httpClient.get<string[]>("http://localhost:8080/message/welcome");
+  }
+
+  getTimeConversion():Observable<string[]> {
+    return this.httpClient.get<string[]>("http://localhost:8080/timezone/conversion");
   }
 }
 

@@ -27,9 +27,13 @@
 <main id="wrapper">
   <div class="scene" id="welcome">
     <article class="content">
-
-
-
+      <div *ngIf="timeConversion">
+        <strong>Join our live online presentation at the following times!</strong>
+        <div *ngFor="let item of timeConversion">
+          {{item}}
+        </div>
+      </div>
+      <br/><br/><br/>
       <div class="row">
         <div class="col-12">
           <div class="gallery">

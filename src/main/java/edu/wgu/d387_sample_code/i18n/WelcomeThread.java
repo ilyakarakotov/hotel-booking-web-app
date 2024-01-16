@@ -19,7 +19,6 @@ public class WelcomeThread {
             try {
                 InputStream stream = new ClassPathResource("welcome_en_US.properties").getInputStream();
                 properties.load(stream);
-                System.out.println(properties.getProperty("welcome"));
                 messages.add(properties.getProperty("welcome"));
             } catch (Exception e) {
                 e.printStackTrace();
@@ -29,7 +28,6 @@ public class WelcomeThread {
             try {
                 InputStream stream = new ClassPathResource("welcome_fr_CA.properties").getInputStream();
                 properties.load(stream);
-                System.out.println(properties.getProperty("welcome"));
                 messages.add(properties.getProperty("welcome"));
             } catch (Exception e) {
                 e.printStackTrace();

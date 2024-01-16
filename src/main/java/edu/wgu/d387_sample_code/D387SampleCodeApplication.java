@@ -12,11 +12,6 @@ public class D387SampleCodeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(D387SampleCodeApplication.class, args);
-		WelcomeThread thread = new WelcomeThread();
-		TimeConversion time = new TimeConversion();
-
-		thread.getWelcomeMessage();
-		System.out.println(time.getTimeConversion());
 	}
 
 }

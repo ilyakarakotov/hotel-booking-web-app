@@ -26,17 +26,14 @@ public class TimeConversion {
 
         ZonedDateTime zonedDateTimeEastern = zonedPresentationTime.withZoneSameInstant(zEastern);
         String eastern = zonedDateTimeEastern.format(formatter);
-        System.out.println("Eastern: " + eastern);
         timeZoned.add(eastern);
 
         ZonedDateTime zonedDateTimeMountain = zonedPresentationTime.withZoneSameInstant(zMountain);
         String mountain = zonedDateTimeMountain.format(formatter);
-        System.out.println("Mountain: " + mountain);
         timeZoned.add(mountain);
 
         ZonedDateTime zonedDateTimeUniversal = zonedPresentationTime.withZoneSameInstant(zUniversal);
         String universal = zonedDateTimeUniversal.format(formatter);
-        System.out.println("Universal: " + universal);
         timeZoned.add(universal);
 
         return timeZoned;
